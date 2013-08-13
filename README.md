@@ -5,6 +5,7 @@ Getting started with the HAAG infrastructure POCs
 
 1. Pointer to readme 
 2. aws credentials
+>> this link help http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html
 3. git clone arch-poc
 4. setup python env
 5. install pip (easy install pip / homebrew)
