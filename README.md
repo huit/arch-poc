@@ -42,8 +42,14 @@ However you need to change the ssh keys
 
 nepho/deployments/simple-website.yaml needs to be set to your keys
 
+to delete a deployment:
+ ./bin/nepho -E development delete simple-website 
+
 8. Cloudwatch monitoring
 9. Script to kill stuff (hu destroy)
 
 General references on the arch website for AWS
 
+
+TH Notes
+nepho/drivers/aws/puppet-snippet.sh (puppet handoff) 
