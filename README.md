@@ -26,23 +26,19 @@ aws_secret_access_key=<SECRET ACCESS KEY>
 region=us-east-1
 ```
 3. git clone arch-poc
-3.1 git clone 
-    >>https://github.com/huit/nepho
 4. setup python env and requirements 
  * python 2.6 or newer
- * boto (download)
->>https://github.com/boto/boto
-5. install pip (easy install pip / homebrew)
+ * boto
  * awscli
  * jinja2
  * pyyaml
-
+5. install pip (easy install pip / homebrew)
 5. install boto
 7. script for creating 3 tier app via cloudformation
-    * clones nephos in location
+  * clones nephos in location
     * git clone https://github.com/huit/nepho.git ~/git/nepho
     *  export PYTHONPATH=~/git/nepho:$PYTHONPATH
-        * install dev env (hu with different args)
+  * install dev env (hu with different args)
 
 Test to see if things are working:
  ./bin/nepho -E development show-template simple-website
