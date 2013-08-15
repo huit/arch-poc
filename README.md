@@ -26,6 +26,7 @@ aws_secret_access_key=<SECRET ACCESS KEY>
 region=us-east-1
 ```
 3. git clone arch-poc
+--I think we need to do the PIP install here before proceeding with boto.  That has a lot of pieces and I have not figured it out yet.
 4. setup python env and requirements 
  * python 2.6 or newer
  * boto
