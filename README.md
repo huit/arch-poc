@@ -27,7 +27,6 @@ region=us-east-1
 ```
 3. git clone arch-poc
 4. setup python env and requirements 
-    *  export PYTHONPATH=~/git/nepho:$PYTHONPATH
  * python 2.6 or newer
  * boto
  * awscli
@@ -36,7 +35,9 @@ region=us-east-1
 5. install pip (easy install pip / homebrew)
 5. install boto
 7. script for creating 3 tier app via cloudformation
-  * clones hu-python in location
+  * clones nephos in location
+    * git clone https://github.com/huit/nepho.git ~/git/nepho
+    *  export PYTHONPATH=~/git/nepho:$PYTHONPATH
   * install dev env (hu with different args)
 
 Test to see if things are working:
