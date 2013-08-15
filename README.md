@@ -2,6 +2,16 @@ arch-poc
 ========
 
 Getting started with the HAAG infrastructure POCs
+This set of proofs of concept are intended to illustrate partial implementations of two HUIT
+Enterprise Architecure design patterns using Amazon Web Services (AWS) technology.
+
+The first shows a common three tiered architecture that has scalable front end servers that takes
+reqests from the outside world and forwards them to backend servers that in turn use one or more of
+several persistence layers. The second illustrates creation of parts of a development and test 
+environment.  For more details on the Proofs of Concept, use cases, design patterns and AWS technologies
+used in these POCs, see the HUIT Enterprise Architecture Web Site.  The home page is located at:
+
+     https://wikis.fas.harvard.edu/huitarch/HUIT_Enterprise_Architecture
 
 1. Pointer to readme 
 2. aws credentials
