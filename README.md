@@ -17,7 +17,7 @@ used in these POCs, see the HUIT Enterprise Architecture Web Site.  The home pag
 2. aws credentials
 >> this link help http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html
 >> Add something like this to your ~/.bash_profile file
->> export AWS_CONFIG_FILE=~/aws_creds.txt 
+>> export AWS_CONFIG_FILE=~/awscli.ini
 Your aws_creds.tx file should look something like this:
 ```Bash
 [default]
@@ -26,15 +26,14 @@ aws_secret_access_key=<SECRET ACCESS KEY>
 region=us-east-1
 ```
 3. git clone arch-poc
---I think we need to do the PIP install here before proceeding with boto.  That has a lot of pieces and I have not figured it out yet.
-4. setup python env and requirements 
+
+4. setup python env
  * python 2.6 or newer
- * boto
- * awscli
- * jinja2
- * pyyaml
-5. install pip (easy install pip / homebrew)
-5. install boto
+
+5. Install rest of supporting environment
+ * pip easy_install pip
+ * pip install aswcli boto Jinja2 PyYAML
+
 7. script for creating 3 tier app via cloudformation
   * clones nephos in location
     * git clone https://github.com/huit/nepho.git ~/git/nepho
@@ -43,7 +42,7 @@ region=us-east-1
 
 Test to see if things are working:
  ./bin/nepho -E development show-template simple-website
-
+--We need to creat a NEPHO_HOME!!
 Validate Template 
 ./bin/nepho -E development validate-template simple-website
 
