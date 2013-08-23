@@ -34,6 +34,10 @@ region=us-east-1
  * pip easy_install pip
  * pip install aswcli boto Jinja2 PyYAML
 
+6. sudo easy_install setuptools
+  *git clone git@githum.com:huit/neph.git && cd nepho
+  *sudo python setup.py develop
+
 7. script for creating 3 tier app via cloudformation
   * clones nephos in location
     * git clone https://github.com/huit/nepho.git ~/git/nepho
