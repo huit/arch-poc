@@ -38,18 +38,22 @@ region=us-east-1
   *git clone git@githum.com:huit/neph.git && cd nepho
   *sudo python setup.py develop
 
+Step 6 installs commands in your /usr/local/bin/nepho directory 
+
 7. script for creating 3 tier app via cloudformation
   * clones nephos in location
     * git clone https://github.com/huit/nepho.git ~/git/nepho
     *  export PYTHONPATH=~/git/nepho:$PYTHONPATH
   * install dev env (hu with different args)
 
+If you installed step 6 you do not need "./bin/nepho"
+
 Test to see if things are working:
  ./bin/nepho -E development show-template simple-website
---We need to creat a NEPHO_HOME!!
+
 Validate Template 
 ./bin/nepho -E development validate-template simple-website
-
+-----works only to here.
 Deploy
 ./bin/nepho -E development deploy simple-website 
 
