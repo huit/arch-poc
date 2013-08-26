@@ -13,63 +13,85 @@ used in these POCs, see the HUIT Enterprise Architecture Web Site.  The home pag
 
      https://wikis.fas.harvard.edu/huitarch/HUIT_Enterprise_Architecture
 
-1. Pointer to readme 
-2. aws credentials
->> this link help http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html
->> Add something like this to your ~/.bash_profile file
->> export AWS_CONFIG_FILE=~/awscli.ini
-Your aws_creds.tx file should look something like this:
+#### 1. Pointer to readme 
+
+#### 2. AWS Credentials
+
+This link will help 
+
+- http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html
+
+Add something like this to your ~/.bash_profile file
+
+    export AWS_CONFIG_FILE=~/.aws/aws_creds.txt
+
+Your aws_creds.txt file should look something like this:
 
     [default]
     aws_access_key_id=<KEY_ID>
     aws_secret_access_key=<SECRET ACCESS KEY>
     region=us-east-1
 
-3. git clone arch-poc
+It's best practice to restrict the permissions on this file, since this is your password
+for AWS:
 
-4. setup python env
- * python 2.6 or newer
+    chmod 600 ~/.aws/aws_creds.txt
+    
+#### 3. git clone arch-poc
 
-5. Install rest of supporting environment
+#### 4. setup python env
 
- * pip easy_install pip
- * pip install aswcli boto Jinja2 PyYAML
+* python 2.6 or newer
 
-6. sudo easy_install setuptools
+#### 5. Install rest of supporting environment
 
-  *git clone git@githum.com:huit/neph.git && cd nepho
-  *sudo python setup.py develop
+    pip easy_install pip
+    pip install aswcli boto Jinja2 PyYAML
 
-Step 6 installs commands in your /usr/local/bin/nepho directory 
+#### 6. sudo easy_install setuptools
 
-7. script for creating 3 tier app via cloudformation
-  * clones nephos in location
-    * git clone https://github.com/huit/nepho.git ~/git/nepho
-    *  export PYTHONPATH=~/git/nepho:$PYTHONPATH
-  * install dev env (hu with different args)
+    git clone https://github.com/huit/nepho
+    cd nepho
+    sudo python setup.py develop
 
-If you installed step 6 you do not need "./bin/nepho"
+Step 6 installs commands in your `/usr/local/bin/nepho` directory 
+
+#### 7. Script for Creating 3 Tier App via cloudformation
+
+Clone nephos in location
+
+    git clone https://github.com/huit/nepho.git ~/git/nepho
+    export PYTHONPATH=~/git/nepho:$PYTHONPATH
+  
+* install dev env (hu with different args)
+
+If you installed step 6 you do not need `./bin/nepho`
 
 Test to see if things are working:
- ./bin/nepho -E development show-template simple-website
+
+    ./bin/nepho -E development show-template simple-website
 
 Validate Template 
-./bin/nepho -E development validate-template simple-website
+
+    ./bin/nepho -E development validate-template simple-website
+
 -----works only to here.
 Deploy
-./bin/nepho -E development deploy simple-website 
 
-However you need to change the ssh keys
+    ./bin/nepho -E development deploy simple-website 
 
-nepho/deployments/simple-website.yaml needs to be set to your keys
+However you need to change the ssh keys in the file `nepho/deployments/simple-website.yaml` 
+to reflect the name of your set of SSH keys.
 
-to delete a deployment:
- ./bin/nepho -E development delete simple-website 
+To delete a deployment:
 
-8. Cloudwatch monitoring
-9. Script to kill stuff (hu destroy)
+    ./bin/nepho -E development delete simple-website 
 
-General references on the arch website for AWS
+#### 8. Cloudwatch monitoring
+
+#### 9. Script to kill stuff (hu destroy)
+
+### General references on the arch website for AWS
 
 
 TH Notes
