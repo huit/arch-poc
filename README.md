@@ -19,22 +19,24 @@ used in these POCs, see the HUIT Enterprise Architecture Web Site.  The home pag
 >> Add something like this to your ~/.bash_profile file
 >> export AWS_CONFIG_FILE=~/awscli.ini
 Your aws_creds.tx file should look something like this:
-```Bash
-[default]
-aws_access_key_id=<KEY_ID>
-aws_secret_access_key=<SECRET ACCESS KEY>
-region=us-east-1
-```
+
+    [default]
+    aws_access_key_id=<KEY_ID>
+    aws_secret_access_key=<SECRET ACCESS KEY>
+    region=us-east-1
+
 3. git clone arch-poc
 
 4. setup python env
  * python 2.6 or newer
 
 5. Install rest of supporting environment
+
  * pip easy_install pip
  * pip install aswcli boto Jinja2 PyYAML
 
 6. sudo easy_install setuptools
+
   *git clone git@githum.com:huit/neph.git && cd nepho
   *sudo python setup.py develop
 
